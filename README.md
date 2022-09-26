@@ -19,6 +19,7 @@ Things to look into
 - https://apitracker.io/a/chegg
 - https://apitracker.io/a/quizlet
 - https://apitracker.io/a/coursehero
+- https://www.c-sharpcorner.com/article/dialog-boxes-in-c-sharp/ (This is c# for opeing windows file system)
 
 # Future things to maybe add
 Build the application interface with C# Visual Studio and have that run Python within the C#
