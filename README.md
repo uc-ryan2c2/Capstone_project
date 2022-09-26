@@ -19,11 +19,9 @@ Things to look into
 - https://apitracker.io/a/chegg
 - https://apitracker.io/a/quizlet
 - https://apitracker.io/a/coursehero
-- https://www.c-sharpcorner.com/article/dialog-boxes-in-c-sharp/ (This is c# for opeing windows file system)
+- covert PDF to image - https://www.geeksforgeeks.org/convert-pdf-to-image-using-python/
+- read text off of image https://python-bloggers.com/2022/05/extract-text-from-image-using-python/
 
-# Future things to maybe add
-Build the application interface with C# Visual Studio and have that run Python within the C#
-Have Python read a file systems where teachers uploaded there test and scan each test
 
 ## Base code part 1
 * A place where Teachers can upload a document (Need to decide what type of document teachers can upload)
@@ -33,16 +31,6 @@ Have Python read a file systems where teachers uploaded there test and scan each
 * The web scrapping part takes place after this
   * Figure out how we are going to web scrape
   * can we spawn and browser within the script and use that to search?
-  * 
-
-
-
-## base code part 2
-
-
-
-## base code final
-
 
 
 ## Everything that needs to happen
