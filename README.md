@@ -23,24 +23,23 @@ Things to look into
 - read text off of image https://python-bloggers.com/2022/05/extract-text-from-image-using-python/
 
 
-## Base code part 1
-* A place where Teachers can upload a document (Need to decide what type of document teachers can upload)
-* The scan each question within the test
-  * figure out how to scan and search question by question
-  * this part will need to be asynchronous
-* The web scrapping part takes place after this
-  * Figure out how we are going to web scrape
-  * can we spawn and browser within the script and use that to search?
+## Phases with development
+### phase 1 (main code development)
+1a. Turn PDF document into image
+1b. Scan Image to grab text off of image
+1c. Look at output and see how just the questions can be grabbed and inserted into a list
+1d. If output cannot be parsed for questions, create an AI that can  jub grab the questions
+1e. Create a function that will be run against each question to start the web scraper
+1f. output a list of URLs found for each question that was searched against and web-scrape each URL to see if the question was found
+1g. Figure out a way to see if the questioned was answered within the URL (this could be where the teacher uploads the answer document and we match the answers found online to the answer document)
+1h. mark where each question was found 
+1i. Give the test a score on how easy it is to find the answers online
+
+### phase 2 (UI development)
+2a. Create a button that will allow users to upload a document (PDF)
+2b. Create a document display form on the website that will display the document that was uploaded
+2c. Create a button that will start the cheat checker
+2d. display the content that was found by the webscrapper
+2e. All the user to export the findings to a PDF document
 
 
-## Everything that needs to happen
-1. What type of app do we want to make?
-   1. Do we want a HTML based webpage?
-   2. Could an azure function app work?
-   3. Do we need to code in HTML and CSS for the webpage?
-   4. We could build the website with flask or Django (Django would be the better choice)
-
-2. Teacher uploads a file
-   1. How do they upload a file?
-   2. Where are we going to store the files?
-   3. Azure could be the back end?
