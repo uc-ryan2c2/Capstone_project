@@ -21,13 +21,14 @@ Things to look into
 - https://apitracker.io/a/coursehero
 - covert PDF to image - https://www.geeksforgeeks.org/convert-pdf-to-image-using-python/
 - read text off of image https://python-bloggers.com/2022/05/extract-text-from-image-using-python/
+- https://github.com/matmill5/ken-batcher-pp-ocr/blob/master/go_OCR.py
 
 
 ## Phases with development
 ### phase 1 (main code development)
 1a. Turn PDF document into image
 1b. Scan Image to grab text off of image
-1c. Look at output and see how just the questions can be grabbed and inserted into a list
+1c. Look at output and see how we can just grab the questions off the image
 1d. If output cannot be parsed for questions, create an AI that can  jub grab the questions
 1e. Create a function that will be run against each question to start the web scraper
 1f. output a list of URLs found for each question that was searched against and web-scrape each URL to see if the question was found
