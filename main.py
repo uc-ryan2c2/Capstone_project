@@ -8,23 +8,30 @@ class Abstraction:
         self.pdf_name = pdf_name
 
     def PDFtoImage(self):
-        images = convert_from_path(f"./pdfs/{self.pdf_name}", 500, poppler_path=r'./poppler-22.04.0/Library/bin')
-        os.chdir("./images")
-
+        # Create the directory for the images to get saved to
         just_pdf_name_list = self.pdf_name.split(".")
         just_pdf_name = just_pdf_name_list[0]
         pdf_image_dir_name = f"{just_pdf_name}-images"
-        os.system(f"mkdir {pdf_image_dir_name}")
 
-        if os.listdir(f"./images/{pdf_image_dir_name}") ==[]:
+        # Check if the directory already exist
+        images_dir_exist = os.path.exists(f"./images/{pdf_image_dir_name}")
+
+        # Create the directory if it does not exist
+        if images_dir_exist == False:
+            os.mkdir(f"./images/{pdf_image_dir_name}")
+        else:
+            print("Directory already exist")
+
+        if os.listdir(f"./images/{pdf_image_dir_name}") == []:
             # Change into the specific directory for the PDF to save the images to
-            os.chdir(f"./{just_pdf_name}-images")
+            images = convert_from_path(f"./pdfs/{self.pdf_name}", 500, poppler_path=r'./poppler-22.04.0/Library/bin')
 
+            os.chdir(f"./images/{pdf_image_dir_name}")
             for i in range(len(images)):
                 # Save pages as images in the pdf
                 images[i].save('page' + str(i) + '.jpg', 'JPEG')
-            else:
-                print(f"images already generated for {just_pdf_name}")
+        else:
+            print(f"images already generated for {just_pdf_name}")
 
 if __name__ == '__main__':
 
