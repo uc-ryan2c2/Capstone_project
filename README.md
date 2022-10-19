@@ -34,7 +34,7 @@ Things to look into
 1f. output a list of URLs found for each question that was searched against and web-scrape each URL to see if the question was found
 1g. Figure out a way to see if the questioned was answered within the URL (this could be where the teacher uploads the answer document and we match the answers found online to the answer document)
 1h. mark where each question was found 
-1i. Give the test a score on how easy it is to find the answers online
+1i. Give the test a score on how easy it is to find the answers online (optional)
 
 ### phase 2 (UI development)
 2a. Create a button that will allow users to upload a document (PDF)
