@@ -2,7 +2,6 @@ import os
 from PIL import Image
 import pytesseract
 from pdf2image import convert_from_path
-import 
 
 class Abstraction:
     def __init__(self, pdf_name):
