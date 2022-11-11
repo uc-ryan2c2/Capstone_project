@@ -19,8 +19,6 @@ Things to look into
 - https://apitracker.io/a/chegg
 - https://apitracker.io/a/quizlet
 - https://apitracker.io/a/coursehero
-- covert PDF to image - https://www.geeksforgeeks.org/convert-pdf-to-image-using-python/
-- read text off of image https://python-bloggers.com/2022/05/extract-text-from-image-using-python/
 - https://github.com/matmill5/ken-batcher-pp-ocr/blob/master/go_OCR.py
 
 
