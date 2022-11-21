@@ -1,3 +1,5 @@
+import time
+
 import requests
 import json
 import os
@@ -98,13 +100,13 @@ class CheatChecker:
         request.json()
         content = request.content.decode('utf-8')
         data = json.loads(content)
-        print("done")
 
         self.questions = []
         self.answer_list = []
         for question in data:
             # grab the question text
             question_text = question['question_text'].split("<em>")[1].split("&")[0]
+            print(question_text)
             self.questions.append(question_text)
 
             # Grab the answers and put them in a list and add that list to the main list
@@ -112,6 +114,7 @@ class CheatChecker:
             temp_answer_list = []
             for answer in question_list:
                 temp_answer_list.append(answer['text'])
+                print(answer)
 
             self.answer_list.append(temp_answer_list)
 
@@ -122,13 +125,15 @@ class CheatChecker:
         for q in self.questions:
             temp_url_list = []
             for url in search(q, tld="co.in", num=10, stop=10, pause=2):
+                print(url)
                 temp_url_list.append(url)
             self.url_list.append(temp_url_list)
+            time.sleep(5)
 
     # TODO do I need to create a function for the cheat checker score? How will the score be calculated?
-    def webscrape(self):
-        print("tempt")
-
+    # def webscrape(self):
+    #     print("temp")
+    #
 
 if __name__ == '__main__':
     # set up canvas environment
