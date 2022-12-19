@@ -2,7 +2,7 @@ from PIL import Image
 from pytesseract import pytesseract
 import os
 
-
+#testinng
 
 if __name__ == '__main__':
     #Define path to tessaract.exe
