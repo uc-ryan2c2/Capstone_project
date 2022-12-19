@@ -1,0 +1,2 @@
+{{ request.user }} //this will print out the logged-in user
+{{ request.user.is_authenticated}} this will give you a boolean on whether the user is authenticated or not
