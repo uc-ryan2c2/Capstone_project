@@ -30,7 +30,7 @@ urlpatterns = [
     path('accountSetup/', account_setup, name='accountSetup'),
 
     # quizzes page
-    path('quizzes/', quizzes_view, name='accountSetup'),
+    path('quizzes/', quizzes_view, name='quizzes'),
 
     # admin page (database)
     path('admin/', admin.site.urls),

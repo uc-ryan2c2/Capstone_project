@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     # own
     'authentication',
     'classes_page',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +58,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cheat_checker.urls'
+
+# setup css static directory
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 TEMPLATES = [
     {

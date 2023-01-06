@@ -1,5 +1,86 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheat Checker</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	{% load static %}
+	<link rel="icon" type="image/png" href="{% static 'login_page/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'login_page/css/main.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-{% block content %}
-<h1> Account Setup Page</h1>
-{% endblock %}
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('../static/login_page/images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST"> {%csrf_token %}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Create Account
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="logininput100" type="text" name="username" placeholder="Username" required minlength="6">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="logininput100" type="password" name="password" placeholder="Password" required minlength="8">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Re-enter password">
+						<input class="logininput100" type="password" name="password2" placeholder="Retype Password" required minlength="8">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter Email">
+						<input class="logininput100" type="email" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter Canvas Token">
+						<input class="logininput100" type="text" name="canvas_token" placeholder="Canvas Token">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Create Account
+						</button>
+					</div>
+
+					<div class="text-center p-t-10">
+						<p class="create_account">
+							Already have an account?
+						<a class="create_account" href="{% url 'login' %}">
+							Click here to login
+						</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+</body>
+</html>
