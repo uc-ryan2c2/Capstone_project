@@ -5,30 +5,30 @@ class createUser(forms.Form):
     username = forms.CharField(
         label='username',
         max_length=30,
-        widget=forms.TextInput(attrs={'class': "input"}),
+        widget=forms.TextInput(attrs={'class': "logininput100"}),
         required=True
     )
     password = forms.CharField(
         label='password',
         max_length=30,
-        widget=forms.TextInput(attrs={'class': "input"}),
+        widget=forms.TextInput(attrs={'class': "logininput100"}),
         required=True
     )
     password2 = forms.CharField(
         label='password2',
         max_length=30,
-        widget=forms.TextInput(attrs={'class': "input"}),
+        widget=forms.TextInput(attrs={'class': "logininput100"}),
         required=True
     )
     email = forms.CharField(
         label='email',
         max_length=50,
-        widget=forms.TextInput(attrs={'class': "input"}),
+        widget=forms.TextInput(attrs={'class': "logininput100"}),
         required=True
     )
     canvas_token = forms.CharField(
-        label='token',
-        widget=forms.TextInput(attrs={'class': "input"}),
+        label='canvas_token',
+        widget=forms.TextInput(attrs={'class': "logininput100"}),
         required=True
     )
 
@@ -46,6 +46,7 @@ class createUser(forms.Form):
     def clean_email(self):
         email = self.cleaned_data.get('email')
         return email
+
 
 
     # def account_validation(self):

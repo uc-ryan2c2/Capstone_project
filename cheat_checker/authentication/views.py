@@ -18,6 +18,7 @@ def account_setup(request, *args, **kwargs):
         form = createUser(request.POST)
 
         if form.is_valid():
+            # if the form is valid, the user data will be saved and the user will be redirected back to the login page
             username = request.POST['username']
             password = request.POST['password']
             password2 = request.POST['password2']
@@ -25,10 +26,12 @@ def account_setup(request, *args, **kwargs):
 
             instance = Auth(username=username, email_address=email, password=password)
             instance.save()
+            print("data has been saved to DB")
+            return HttpResponseRedirect('/')
         else:
-            form = createUser()
+            # if the form is not valid the user will be redirected to the same page but the validation errors will be displayed
+            print("error")
 
-        print("data has been saved to DB")
     context = {'form': form}
     return render(request, "accountSetup.html", context)
 

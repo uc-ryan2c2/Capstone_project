@@ -35,24 +35,29 @@
 						Create Account
 					</span>
 
+					{{ form.non_field_errors }}
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="logininput100" type="text" name="username" placeholder="Username" required minlength="6">
-						<span class="focus-input100"></span>
+						{{ form.username.errors }}
+						{{ form.username.username}}
+						{{ form.username }}
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="logininput100" type="password" name="password" placeholder="Password" required minlength="8">
-						<span class="focus-input100"></span>
+						{{ form.password.errors }}
+						{{ form.password.password}}
+						{{ form.password }}
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Re-enter password">
-						<input class="logininput100" type="password" name="password2" placeholder="Retype Password" required minlength="8">
-						<span class="focus-input100"></span>
+						{{ form.password2.errors }}
+						{{ form.password2.password2}}
+						{{ form.password2 }}
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter Email">
-						<input class="logininput100" type="email" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
+						{{ form.email.errors}}
+						{{ form.email.email }}
+						{{ form.email }}
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter Canvas Token">

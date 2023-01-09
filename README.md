@@ -25,3 +25,6 @@ if not able to configure the Universities SS0
 - create a "new user" page and have the professor create their account and link their API token to their account
 - encode the API token and save it to the database
 
+reference- https://github.com/egorsmkv/simple-django-login-and-register
+
+
